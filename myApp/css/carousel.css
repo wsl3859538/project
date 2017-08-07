@@ -1,0 +1,36 @@
+.carousel{
+
+}
+.carousel > img{
+    width: 100%;
+    position: absolute;
+    display: none;
+    -webkit-transition: left .6s ease-in-out;
+    -o-transition: left .6s ease-in-out;
+    -moz-transition: left .6s ease-in-out;
+    transition: left .6s ease-in-out;
+}
+.active{
+    display: block!important;
+    left: 0;
+}
+.left{
+    left:-100%
+}
+.right{
+    left:100%
+}
+.next , .prev{
+    display: block!important;
+}
+
+.next{
+    left:100%
+}
+.prev{
+    left:-100%
+}
+.next.left,
+.prev.right{
+    left: 0;
+}
