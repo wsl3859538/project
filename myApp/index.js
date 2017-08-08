@@ -2,8 +2,8 @@
  * Created by Wangsl on 2017/8/7 0007.
  */
 $(function(){
+    var $content = $('.app_content');
     var data = {};
-
     data.img_Car = ['images/c_1.jpg','images/c_2.jpg','images/c_3.jpg'];
     data.img_xs = ['images/xs_1.jpg','images/xs_2.jpg','images/xs_3.jpg'];
     data.date = new Date(new Date().getTime() + 62 * 1000);  //当前时间的未来62秒
@@ -53,9 +53,56 @@ $(function(){
             '<p>已售&nbsp;'+data.goods[i].sales_volume+'</p>'+
             '<p>¥'+data.goods[i].saleprice+'</p>'+
             '</li>'
-        $('.index_ul').append(html)
+        $('.index_ul').append(html);
     }
 
+    /**
+     * 导航控制
+     */
+    var $nav_aObj = $('.index_head a');
+    var xstm = $('#xstm').offset().top - 44;
+    var xltm = $('#xltm').offset().top - 44;
+    var jsrm = $('#jsrm').offset().top - 44;
+
+    $nav_aObj.click(function(){
+        var text = $(this).text().replace(/\s/g,'');
+        $(this).addClass('black_font').siblings().removeClass('black_font');
+        $(this).siblings().find('p').removeClass('index_choise_p');
+        $(this).find('p').addClass('index_choise_p');
+
+        switch (text){
+            case '限量特卖':
+                $content.scrollTop(xltm);
+                break;
+            case '限时特卖':
+                $content.scrollTop(xstm);
+                break;
+            case '集市热卖':
+                $content.scrollTop(jsrm);
+                break;
+            default:
+        }
+    })
+
+    /**
+     * 监听滑动
+     */
+    $content.scroll(function(e){
+        if($(this).scrollTop()<xltm){
+            $nav_aObj.eq(0).addClass('black_font').siblings().removeClass('black_font');
+            $nav_aObj.eq(0).siblings().find('p').removeClass('index_choise_p');
+            $nav_aObj.eq(0).find('p').addClass('index_choise_p');
+        }else if($(this).scrollTop()>xltm && $(this).scrollTop() <jsrm){
+            $nav_aObj.eq(1).addClass('black_font').siblings().removeClass('black_font');
+            $nav_aObj.eq(1).siblings().find('p').removeClass('index_choise_p');
+            $nav_aObj.eq(1).find('p').addClass('index_choise_p');
+        }
+        else if($(this).scrollTop()>jsrm){
+            $nav_aObj.eq(2).addClass('black_font').siblings().removeClass('black_font');
+            $nav_aObj.eq(2).siblings().find('p').removeClass('index_choise_p');
+            $nav_aObj.eq(2).find('p').addClass('index_choise_p');
+        }
+    })
 })
 
 
