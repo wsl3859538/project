@@ -2,7 +2,10 @@
  * Created by Wangsl on 2017/8/7 0007.
  */
 $(function(){
+    var client_height = document.documentElement.clientHeight;
     var $content = $('.app_content');
+    $('.loading').css('height',client_height);
+    $('.loading').find('img').css('top',client_height/2);
     var data = {};
     data.img_Car = ['images/c_1.jpg','images/c_2.jpg','images/c_3.jpg'];
     data.img_xs = ['images/xs_1.jpg','images/xs_2.jpg','images/xs_3.jpg'];
@@ -101,6 +104,19 @@ $(function(){
             $nav_aObj.eq(2).addClass('black_font').siblings().removeClass('black_font');
             $nav_aObj.eq(2).siblings().find('p').removeClass('index_choise_p');
             $nav_aObj.eq(2).find('p').addClass('index_choise_p');
+        }
+    })
+
+    //获取地址
+    var geolocation = new BMap.Geolocation();
+    geolocation.getCurrentPosition(function(r){
+        if(this.getStatus() == 0){
+            $('.gps_div').text(r.address.city)
+            $('.loading').hide();
+        }else{
+            $('.gps_div').text('请重试')
+            $('.loading').hide();
+            alert('定位失败！')
         }
     })
 })

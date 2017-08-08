@@ -31,6 +31,15 @@ p{
     width: 12%;
     background-position: 5px;
 }
+.front-img{
+    float: left;
+    background: url(../images/right.png) no-repeat;
+    opacity: 0.8;
+    min-height: 30px;
+    background-size: 26px 26px;
+    width: 12%;
+    background-position: 5px;
+}
 
 /**** 内容 ****/
 .app_content{
@@ -50,7 +59,20 @@ p{
 .app_content::-webkit-scrollbar,.market_slide::-webkit-scrollbar{
     display: none;
 }
-
+.app_item{
+    padding: 16px;
+    border-bottom: 1px solid #ccc;
+    overflow: hidden;
+}
+.app_item > p{
+    float: left;
+    width: 60%;
+    height: 25px;
+    line-height: 27px;
+}
+.app_item > div{
+    float: right;
+}
 /**** foot ****/
 .app_foot{
     height: 44px;
@@ -102,6 +124,11 @@ p{
     color: #000!important;
 }
 
+/**** border ****/
+.border_b10{
+    border-bottom: 10px solid rgba(0,0,0,0.1);;
+}
+
 /**** 字体两行显示 ****/
 .fontdouble {
     white-space: pre-wrap!important;
@@ -111,6 +138,22 @@ p{
     -webkit-box-orient: vertical!important;
     word-break: break-all!important;
     min-height: 40px!important;
+}
+
+/**** loading ****/
+.loading{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(0, 0, 0, 0.48);
+    text-align: center;
+}
+.loading > img{
+    position: relative;
+    width: 40px;
 }
 
 /**** index ****/
@@ -387,4 +430,41 @@ p{
     white-space: nowrap;
 }
 
+/**** mycoin ****/
+.mycoin_head{
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 5%;
+}
+.mycoin_head > img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    margin: 0 auto;
+}
+.mycoin_head > p{
+    color: #fff;
+}
+.mycoin_img{
+    width: 100%;
+    height: 110%;
+}
+
+/**** mytables ****/
+.mytables_head{
+    padding: 15px;
+    overflow: hidden;
+}
+.mytables_head > img{
+    width: 80px;
+    float: left;
+}
+.mytables_head > div{
+    overflow: hidden;
+    padding: 5% 0 0 5%;
+}
 

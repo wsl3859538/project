@@ -8,9 +8,12 @@
     <link rel="stylesheet" type="text/css" href="css/carousel.css">
 </head>
 <body>
+    <div class="loading" >
+        <img src="images/loading.GIF">
+    </div>
     <div>
         <div class="app_head">
-            <div class="back-img"></div>
+            <div class="gps_div">定位中..</div>
             <div class="index_head">
                 <a class="black_font">限时特卖
                     <p class="index_choise_p"></p>
@@ -62,7 +65,7 @@
             <div class="index_title" id="xltm">
                 <p class="index_p9"></p>
                 <div class="index_lead index_div1">
-                    <p>a</p>
+                    <p>限时特卖</p>
                 </div>
                 <span>LIMITED SALE</span>
             </div>
@@ -95,8 +98,7 @@
         <!--foot-->
         <div class="app_foot">
             <div>
-                <a class="tab-item cmopacity"
-                   ng-click="goUrl(1,'index')" ng-class="{'redblack':true}">
+                <a class="tab-item cmopacity">
                     <img src="images/tab/sh.png" class="coinimg"><br/>
                     <span class="coinspan black_font">生活特卖</span>
                 </a>
@@ -105,11 +107,11 @@
                     <br/>
                     <span class="coinspan">品牌攻略</span>
                 </a>
-                <a class="tab-item cmopacity"  ng-click="goUrl(3,'mycoin')">
+                <a class="tab-item cmopacity"  onclick="goUrl(3,'mycoin.html')">
                     <img src="images/tab/dr1.png" class="coinimg"><br/>
                     <span class="coinspan">分享达人</span>
                 </a>
-                <a class="tab-item cmopacity"  ng-click="goUrl(4,'mytables')">
+                <a class="tab-item cmopacity"  onclick="goUrl(4,'mytables.html')">
                     <img src="images/tab/dd1.png" class="coinimg"><br/>
                     <span class="coinspan">我的订单</span>
                 </a>
@@ -118,7 +120,20 @@
     </div>
 </body>
 </html>
+
 <script src="jquery-1.8.3.js"></script>
+<!--百度地图-->
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=yvzuk1sI1TKttlx4TGjzKGp2"></script>
 <script src="js/carousel.js"></script>
 <script src="js/util.js"></script>
 <script src="index.js"></script>
+<style>
+    .gps_div{
+        float: left;
+        border-right: 1px solid;
+        padding: 0 5px;
+        height: 34px;
+        margin: 5px 0;
+        line-height: 34px;
+    }
+</style>

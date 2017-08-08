@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width,telephone=no">
+    <meta charset="UTF-8">
+    <title>分享达人</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/carousel.css">
+</head>
+<body>
+<div>
+    <div class="app_head">
+        <h4>我的订单</h4>
+    </div>
+    <div class="app_content">
+        <div class="mytables_head border_b10">
+            <img  src="images/head.jpg"/>
+            <div>
+                <p>myChoise</p>
+                <p>I D:4879</p>
+            </div>
+        </div>
+        <div>
+            <div class="app_item ">
+                <p>购物车</p>
+                <div class="front-img"></div>
+            </div>
+            <div class="app_item">
+                <p style="width: 85%">全部订单<span class="span">查看全部已购宝贝</span></p>
+                <div class="front-img"></div>
+            </div>
+            <div class="app_item border_b10">
+                <a>
+                    <img src="images/waitpay.png"/>
+                    <p>待付款</p>
+                </a>
+                <a>
+                    <img src="images/waitsend.png"/>
+                    <p>待发货</p>
+                </a>
+                <a>
+                    <img src="images/waitsh.png"/>
+                    <p>待收货</p>
+                </a>
+                <a>
+                    <img src="images/waitpj.png"/>
+                    <p>待评价</p>
+                </a>
+                <a>
+                    <img src="images/refund.png"/>
+                    <p>退款/售后</p>
+                </a>
+            </div>
+            <div class="app_item">
+                <p>我的收藏</p>
+                <div class="front-img"></div>
+            </div>
+            <div class="app_item">
+                <p>地址管理</p>
+                <div class="front-img"></div>
+            </div>
+            <div class="app_item border_b10">
+                <p>设置</p>
+                <div class="front-img"></div>
+            </div>
+        </div>
+    </div>
+    <!--foot-->
+    <div class="app_foot">
+        <div>
+            <a class="tab-item cmopacity"
+               ng-click="goUrl(1,'index')" onclick="goUrl(1,'index.html')">
+                <img src="images/tab/sh1.png" class="coinimg"><br/>
+                <span class="coinspan">生活特卖</span>
+            </a>
+            <a class="tab-item cmopacity"  onclick="goUrl(2,'market.html')">
+                <img src="images/tab/pp.png" class="coinimg">
+                <br/>
+                <span class="coinspan">品牌攻略</span>
+            </a>
+            <a class="tab-item cmopacity" onclick="goUrl(3,'mycoin.html')">
+                <img src="images/tab/dr1.png" class="coinimg"><br/>
+                <span class="coinspan">分享达人</span>
+            </a>
+            <a class="tab-item cmopacity"  >
+                <img src="images/tab/dd.png" class="coinimg"><br/>
+                <span class="coinspan black_font">我的订单</span>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="jquery-1.8.3.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/util.js"></script>
+<script src="market.js"></script>
+<style>
+    .app_head > h4{
+        text-align: center;
+    }
+    .app_item > a{
+        display: inline-block;
+        width: 20%;
+        float: left;
+        text-align: center;
+        font-size: 13px;
+    }
+    .app_item > a > img{
+        width: 30px;
+    }
+    .span{
+        float: right;
+        opacity: 0.4;
+    }
+</style>

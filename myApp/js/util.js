@@ -56,3 +56,7 @@ var goUrl = function(index,url){
     }
     self.location = url;
 }
+
+
+
+

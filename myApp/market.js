@@ -88,7 +88,7 @@ $(function(){
      * 动态添加品牌推荐
      */
     for(var i=0;i<data.img_Slide.length;i++){
-        var html = '<li style="height: '+client_height*0.29+'">'+
+        var html = '<li style="height: '+client_height*0.29+'px'+'">'+
             '<img   src='+data.img_Slide[i].img+'>'+
             '<p>'+data.img_Slide[i].name+'</p>'+
             '</li>'
