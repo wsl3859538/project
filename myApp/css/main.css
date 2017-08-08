@@ -8,7 +8,7 @@ body{
     padding: 0;
     margin: 0;
 }
-li{
+ul,li{
     list-style-type: none;
 }
 p{
@@ -50,10 +50,66 @@ p{
     display: none;
 }
 
+/**** foot ****/
+.app_foot{
+    height: 44px;
+    border-top: 1px solid #ccc;
+    background: #F5F5F5;
+    line-height: 44px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.app_foot > div{
+    display: flex;
+}
+.app_foot > div > a{
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -moz-box-flex: 1;
+    -moz-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    line-height: 14px;
+    color: #9E9E9E;
+}
+.app_foot > div > a > img{
+    width: 34px;
+    position: relative;
+    top: -2px;
+    left: 0;
+    -webkit-user-drag: none;
+}
+.app_foot > div > a > span{
+    position: relative;
+    top: -9.5px;
+    left: 0;
+}
+
 
 /**** overflow ****/
 .overflow_hidden{
     overflow: hidden;
+}
+
+/**** font ****/
+.black_font{
+    color: #000!important;
+}
+
+/**** 字体两行显示 ****/
+.fontdouble {
+    white-space: pre-wrap!important;
+    overflow: hidden!important;
+    display: -webkit-box!important;
+    -webkit-line-clamp: 2 !important;
+    -webkit-box-orient: vertical!important;
+    word-break: break-all!important;
+    min-height: 40px!important;
 }
 
 /**** index ****/
@@ -84,6 +140,7 @@ p{
     height: 60px;
     padding: 16px 0 0 0;
     margin: 0 0 5px 0;
+    text-align: center;
 }
 .index_title > p{
     width: 100%;
@@ -106,8 +163,10 @@ p{
     height: 23px;
     margin: 0;
 }
-.index_title > div > span{
-     font-style: italic;
+.index_title  > span{
+    position: relative;
+    bottom: 20px;
+    color: #fff;
 }
 .index_xs_list{
     margin-bottom: 0!important;
@@ -162,6 +221,19 @@ p{
     right: 0;
     margin-right: 10px;
 }
+.index_list_p2{
+    display: initial;
+    background-color: #000;
+    color: #fff!important;
+    height: 25px;
+    line-height: 25px;
+    font-size: 14px!important;
+    position: absolute;
+    width: 80px;
+    text-align: center;
+    right: 0;
+    margin-right: 10px;
+}
 .index_list_more{
     text-align: center;
     height: 56px;
@@ -176,4 +248,39 @@ p{
     height: 25px;
     line-height: 22px;
     display: inline-block;
+}
+.index_ul{
+    width: 100%;
+}
+.index_ul > li{
+    float: left;
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.index_ul > li > img{
+    width: 100%;
+}
+.index_ul > li > p:nth-child(3){
+    font-size: 12px!important;
+    color: #aaa;
+    border-bottom: 1px dotted #ddd;
+    padding: 5px 5px;
+    float: right;
+}
+.index_ul > li > p:nth-child(4){
+    font-size: 12px!important;
+    color: #aaa;
+    border-bottom: 1px dotted #ddd;
+    padding: 5px 5px;
+    text-align: left;
+}
+.index_ul > li > p:nth-child(5){
+    color: #ff4800 !important;
+    z-index: 9999;
+    font-size: 14px;
+    padding: 5px 5px;
+    text-align: left;
 }
