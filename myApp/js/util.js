@@ -44,4 +44,15 @@ var countDown = function(date,item){
             $('.index_img5').show();
         }
     },1000);
+};
+
+/**
+ * 页面跳转
+ */
+var goUrl = function(index,url){
+    if(!url){
+        alert('路径有误，跳转失败！')
+        return;
+    }
+    self.location = url;
 }

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width,telephone=no">
+    <meta charset="UTF-8">
+    <title>品牌攻略</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" type="text/css" href="css/carousel.css">
+</head>
+<body>
+<div>
+    <div class="app_head">
+        <div class="market_head">
+            <form method="post" id="form" action="#" class="ng-pristine ng-valid">
+                <input type="search" placeholder="搜索店铺、分类、地点" id="serch" class="serch_input ng-pristine ng-valid ng-touched">
+            </form>
+        </div>
+    </div>
+    <div class="app_content">
+        <div id="myCarousel" class="carousel" data-height="160"></div>
+        <!--品牌推荐模块-->
+        <div class="index_title">
+            <p class="index_p9"></p>
+            <div class="index_lead index_div1">
+                <p>品牌推荐</p>
+            </div>
+            <span>PREFERRED BRAND</span>
+        </div>
+        <div class="market_slide">
+            <ul class="market_ul"></ul>
+        </div>
+        <!--热门主题模块-->
+        <div class="index_title" >
+            <p class="index_p9"></p>
+            <div class="index_lead index_div1">
+                <p>热门主题</p>
+            </div>
+            <span>HOT TOPIC</span>
+        </div>
+        <div class="market_list" >
+
+        </div>
+    </div>
+    <!--foot-->
+    <div class="app_foot">
+        <div>
+            <a class="tab-item cmopacity"
+               ng-click="goUrl(1,'index')" onclick="goUrl(1,'index.html')">
+                <img src="images/tab/sh1.png" class="coinimg"><br/>
+                <span class="coinspan">生活特卖</span>
+            </a>
+            <a class="tab-item cmopacity"  >
+                <img src="images/tab/pp1.png" class="coinimg">
+                <br/>
+                <span class="coinspan black_font">品牌攻略</span>
+            </a>
+            <a class="tab-item cmopacity"  ng-click="goUrl(3,'mycoin')">
+                <img src="images/tab/dr1.png" class="coinimg"><br/>
+                <span class="coinspan">分享达人</span>
+            </a>
+            <a class="tab-item cmopacity"  ng-click="goUrl(4,'mytables')">
+                <img src="images/tab/dd1.png" class="coinimg"><br/>
+                <span class="coinspan">我的订单</span>
+            </a>
+        </div>
+    </div>
+</div>
+</body>
+</html>
+<script src="jquery-1.8.3.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/util.js"></script>
+<script src="market.js"></script>
